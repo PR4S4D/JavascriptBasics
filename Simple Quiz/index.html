@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Simple Javascript Quiz </title>
+		<link rel="stylesheet" href="css/style.css"></link>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<h1>Simple Javascript Quiz</h1>
+				<p> Test your knowledge in <strong> Javascript fundamentals </strong> </p>
+
+			</header>
+			<section>
+				<div id="results"></div>
+				
+				<form name="quizForm" onsubmit="return submitAnswers() ">
+					<h3>1. In which HTML element do we put in Javascript code ? </h3>
+					<input type="radio" name="q1" value="a" id="q1a"> a.&lt;js &gt; <br> 
+					<input type="radio" name="q1" value="b" id="q1b"> b.&lt;script &gt; <br>
+					<input type="radio" name="q1" value="c" id="q1c"> c.&lt;body &gt; <br>
+					<input type="radio" name="q1" value="d" id="q1d"> d.&lt;link &gt; <br>	
+					
+					<h3>2. How do you write "Hello World" in an alert box ? </h3>
+					<input type="radio" name="q2" value="a" id="q2a"> a. alert("Hello World"); <br> 
+					<input type="radio" name="q2" value="b" id="q2b"> b. msgBox("Hello World"); <br>
+					<input type="radio" name="q2" value="c" id="q2c"> c. alertBox("Hello World"); <br>
+					<input type="radio" name="q2" value="d" id="q2d"> d. msg("Hello World"); <br>	
+					
+					<h3>3. How to write an IF statement in JavaScript? </h3>
+					<input type="radio" name="q3" value="a" id="q3a"> a.if i = 5 <br> 
+					<input type="radio" name="q3" value="b" id="q3b"> b.if i = 5 then <br>
+					<input type="radio" name="q3" value="c" id="q3c"> c. if (i == 5) <br>
+					<input type="radio" name="q3" value="d" id="q3d"> d. if i == 5 then <br>	
+					                                             
+					<h3>4. How to write an IF statement for executing some code if "i" is NOT equal to 5? </h3>
+					<input type="radio" name="q4" value="a" id="q4a"> a. if (i != 5) <br> 
+					<input type="radio" name="q4" value="b" id="q4b"> b. if i <> 5 <br>
+					<input type="radio" name="q4" value="c" id="q4c"> cif (i <> 5) <br>
+					<input type="radio" name="q4" value="d" id="q4d"> d.if i =! 5 then  <br>	
+					
+					<h3>5. How does a FOR loop start? </h3>
+					<input type="radio" name="q5" value="a" id="q5a"> a.for (i = 0; i <= 5) <br> 
+					<input type="radio" name="q5" value="b" id="q5b"> b.for i = 1 to 5 <br>
+					<input type="radio" name="q5" value="c" id="q5c"> c.for (i <= 5; i++)<br>
+					<input type="radio" name="q5" value="d" id="q5d"> d. for (i = 0; i <= 5; i++) <br>	
+					
+					<br><br>
+					<input type="submit" value="Submit Answers"/>
+				</form>
+			</section>
+			
+			<footer>
+				<p> Copyright &copy; 2017, All rights reserved </p>
+			</footer>
+		</div>
+	</body>
+</html>
