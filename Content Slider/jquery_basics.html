@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> Jquery </title>
+		<script src="js/jquery.js"></script>
+		<style>
+			.red{
+				color:red;
+				}
+		</style>
+		<script>
+			$(document).ready(function(){
+				
+				
+/*				$('.myLink').on('mouseenter',function(){
+					<!-- alert("you clicked me!"); -->
+					$('h1').slideUp(500);
+				});
+				
+				$('.myLink').on('mouseenter',function(){
+					<!-- alert("you clicked me!"); -->
+					$('h1').slideDown(500);
+				}); */
+				
+				$('.myLink').click(function(){
+					$('h1').replaceWith('<h3>Hi!</h3>');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Hello World!</h1>
+		<a href="#" class="myLink">Click me</a>
+	</body>
+</html>
