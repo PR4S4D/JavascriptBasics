@@ -10,8 +10,8 @@ body{
 	background:#333;
 	line-height:1.6em;
 }
-
-a{		
+ 
+a{
 	color:#fff;
 	text-decoration:none;
 }
@@ -47,7 +47,7 @@ h1{
 }
 
 .slide-copy{
-	position:absolute; 
+	position:absolute;
 	width:960px;
 	bottom:0;
 	left:0;
@@ -62,7 +62,7 @@ h1{
 	cursor:pointer;
 	position:relative;
 	z-index:100;
-	
+
 }
 
 #prev{
