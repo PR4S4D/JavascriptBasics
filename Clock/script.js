@@ -2,27 +2,23 @@ const HOURHAND = document.querySelector("#hour");
 const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
 
-let hrPos = 20;
-let minPos = 130;
-let secPos = 26;
 
-var date = new Date();
-console.log(date.getHours());
+	var date = new Date();
+	let hour = date.getHours();
+	let min = date.getMinutes();
+	let sec = date.getSeconds();
 
-HOURHAND.style.transform = "rotate("+getHourAngle()+"deg)";
-MINUTEHAND.style.transform = "rotate("+getMinuteAngle()+"deg)";
-SECONDHAND.style.transform = "rotate("+getSecondsAngle()+"deg)";
+	var secPostion = sec *6;
+	var minPosition = min * 6 + sec/10;
+	var hourPosition = hour *30 + min/2 + sec/120;
 
-
-
-function getHourAngle(){
-	return date.getHours() *30 + date.getMinutes()/2 + date.getSeconds()/120;
+function setCurrentTime() {
+	secPostion +=6;
+	minPosition += 1/10;
+	hourPosition +=1/120;
+	HOURHAND.style.transform = "rotate("+hourPosition+"deg)";
+	MINUTEHAND.style.transform = "rotate("+minPosition+"deg)";
+	SECONDHAND.style.transform = "rotate("+secPostion+"deg)";
 }
 
-function getMinuteAngle(){
-	return date.getMinutes() * 6 + date.getSeconds()/10;
-}
-
-function getSecondsAngle(){
-	return date.getSeconds() *6;
-}   
+window.setInterval(setCurrentTime, 1000); 
