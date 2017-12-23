@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Youtube search engine</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!--  use jquery before script.js -->
+		<script src="https://code.jquery.com/jquery-3.2.1.js"
+		  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		  crossorigin="anonymous"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<h1>Search<span>YouTube</span></h1>
+				<p>Search For YouTube Videos</p>
+			</header>
+			<section>
+				<form onsubmit="return search()" name="search-form" id="search-form">
+					<div class="fieldContainer">
+						<input type="search" id="query" class="search-field" placeholder="Search YouTube..">
+						<input type="submit" name="search-button" id="seach-button" value="">								
+					</div>
+				</form>
+
+				<ul id="results"></ul>
+				<div id="buttons"></div>
+			</section>
+			<footer>
+				<p></p>
+			</footer>
+		</div>
+	</body>
+</html>
