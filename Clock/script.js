@@ -3,14 +3,14 @@ const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
 
 
-	var date = new Date();
-	let hour = date.getHours();
-	let min = date.getMinutes();
-	let sec = date.getSeconds();
+var date = new Date();
+let hour = date.getHours();
+let min = date.getMinutes();
+let sec = date.getSeconds();
 
-	var secPostion = sec *6;
-	var minPosition = min * 6 + sec/10;
-	var hourPosition = hour *30 + min/2 + sec/120;
+var secPostion = sec *6;
+var minPosition = min * 6 + sec/10;
+var hourPosition = hour *30 + min/2 + sec/120;
 
 function setCurrentTime() {
 	secPostion +=6;
