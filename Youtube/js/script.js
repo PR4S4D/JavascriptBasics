@@ -26,6 +26,48 @@ $(function() {
 		 		right: '360px'
 		 	}, 400);
 		 }
-
 	});
+
+	$('#search-form').submit(function(e) {
+		e.preventDefault();
+	});	
 }); 
+
+//https://www.googleapis.com/youtube/v3/search?part=snippet&q=Adele&key=AIzaSyAf4IEgy469xdmJu7VmYT3wOwpfvZrtwd4
+
+function search() {
+	//clear results
+
+	console.log('inside search')
+
+	$('#results').html('');
+
+	$('#buttons').html('');
+
+	// get form input
+	q = $('#query').val();
+
+	// Run get request on API
+
+	$.get(
+		"https://www.googleapis.com/youtube/v3/search",{
+			part: 'snippet,id',
+			q:q,
+			type:'video',
+			key:'AIzaSyAf4IEgy469xdmJu7VmYT3wOwpfvZrtwd4'},
+			function(data) {
+				var nextPageToken = data.nextPageToken;
+				var prevPageToken = data.prevPageToken;
+				console.log(data);
+
+				$.each(data.items, function(i, item){
+					var output = getOutput(item);
+
+					// display results 
+
+					$('#results').append(output);
+				});
+			}
+		);	
+}
+
