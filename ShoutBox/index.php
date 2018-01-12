@@ -1,15 +1,16 @@
 <?php include 'database.php'; ?>
+<?php 
+	$query = "SELECT * from shout order by id desc";
+	$shouts = mysqli_query($con,$query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>ShoutBox</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
-	<script
-	src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-	integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-	crossorigin="anonymous"></script>
 </head>
 <body>
 	<div id="container">
@@ -18,7 +19,9 @@
 		</header>
 		<div id="shouts">
 			<ul>
-				<li></li>
+				<?php while ($row = mysqli_fetch_assoc($shouts)) : ?>
+				<li> <?php echo $row['name']; ?>: <?php echo $row['shout']; ?> [<?php echo $row['date']; ?>]</li>
+			<?php endwhile; ?>
 			</ul>
 		</div>
 		<footer>
